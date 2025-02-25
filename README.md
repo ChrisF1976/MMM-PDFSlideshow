@@ -58,21 +58,21 @@ MMM-PDFSlideshow is a MagicMirror module that displays PDF documents as a slides
 - Sends the list of PDFs back to the frontend for display.
 - Logs errors if the directory cannot be read or contains no PDFs.
 
----
+
 
 ## Limitations
 
 - **Fullscreen Mode Issue:** When in fullscreen mode, the entire page might not be fully visible.
 - **Initial Page Issue:** On module startup, sometimes the first displayed page is not page 1 of the PDF.
 
----
+
 
 ## Customization
 
 - Adjust settings like `displayTime`, `fullscreen`, `width`, `pageflip`, and `transitionEffect` to fit your needs.
 - Modify `MMM-PDFSlideshow.css` for further styling.
 
----
+
 
 ## Troubleshooting
 
@@ -80,7 +80,7 @@ MMM-PDFSlideshow is a MagicMirror module that displays PDF documents as a slides
 - **No PDFs Found:** Check the configured folder path and ensure PDFs are present.
 - **Rendering Issues:** Check for CSS conflicts with other modules.
 
----
+
 
 ### License
 This project is open-source and available under the MIT License.
