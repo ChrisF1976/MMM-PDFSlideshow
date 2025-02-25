@@ -34,7 +34,7 @@ MMM-PDFSlideshow is a MagicMirror module that displays PDF documents as a slides
        pdfContainer: "pdfs/",       // Folder containing PDF files. The "/" is necessary.
        displayTime: 10000,          // Time in milliseconds per PDF/page
        fullscreen: false,           // Enable or disable fullscreen mode. If true, set also `position` to a fulscreen region.
-       width: "500px",              // Width when fullscreen is disabled
+       width: "500px",              // Width when fullscreen is not disabled
        pageflip: false,             // Automatically flip through pages
        transitionEffect: "fade",
        transitionEffectSpeed: 1000
