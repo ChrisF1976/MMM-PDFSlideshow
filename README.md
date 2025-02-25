@@ -31,8 +31,8 @@ MMM-PDFSlideshow is a MagicMirror module that displays PDF documents as a slides
      module: "MMM-PDFSlideshow",
      position: "bottom_center", // Adjust as needed.
      config: {
-       pdfContainer: "pdfs/",       // Folder containing PDF files. The "/" is necessary. Fallback if `pdfPath` is not set.
-       pdfPath: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf", //replace with your PDF-path of leave blank.
+       pdfContainer: "pdfs/",       // Folder containing local PDF files. The "/" is necessary. Fallback if `pdfPath` is not set.
+       pdfPath: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf", //replace with your PDF-path or leave blank.
        displayTime: 10000,          // Time in milliseconds per PDF/page
        fullscreen: false,           // Enable or disable fullscreen mode. If true, set also `position` to a fulscreen region.
        width: "500px",              // Width when fullscreen is not disabled
@@ -55,9 +55,10 @@ MMM-PDFSlideshow is a MagicMirror module that displays PDF documents as a slides
 - Automatically switches between PDFs/pages based on the `displayTime`.
 
 ### Node Helper
-- Reads the specified PDF directory and filters only valid PDF files.
+- Reads the specified PDF directory or URL and filters only valid PDF files.
 - Sends the list of PDFs back to the frontend for display.
 - Logs errors if the directory cannot be read or contains no PDFs.
+- If `pdfPath: "",` is not blank then the `pdfURL`-folder is created 
 
 
 
@@ -65,7 +66,8 @@ MMM-PDFSlideshow is a MagicMirror module that displays PDF documents as a slides
 
 - **Fullscreen Mode Issue:** When in fullscreen mode, the entire page might not be fully visible.
 - **Initial Page Issue:** On module startup, sometimes the first displayed page is not page 1 of the PDF.
-
+- If a URL-PDF (or one single PDF) should be displayed change `displayTime: 10000,` to a higher value (avoid flickering)
+- If a downloaded and local pdf should be displayed then copy or move the pdf from the `pdfURL` to `pdfs` folder and leave the URL in the config blank.
 
 
 ## Customization
