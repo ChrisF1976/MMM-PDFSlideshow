@@ -3,7 +3,7 @@ Module.register("MMM-PDFSlideshow", {
     pdfContainer: "pdfs/",       // Relative folder (with trailing slash)
     displayTime: 10000,          // Time (ms) each page (or PDF) is shown
     fullscreen: false,           // If true, module fills entire screen
-    width: "800px",              // Module width when fullscreen is false
+    width: "500px",              // Module width when fullscreen is false
     pageflip: false,       // If true, auto-advance through each page; if false, show scalable PDF
     transitionEffect: "fade",
     transitionEffectSpeed: 1000
