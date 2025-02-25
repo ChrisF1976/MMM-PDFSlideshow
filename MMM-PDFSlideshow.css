@@ -1,13 +1,9 @@
-/* MMM-PDFSlideshow.css */
-
-/* Modulcontainer zentrieren */
 .MMM-PDFSlideshow {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
-/* Flex-Container, um Inhalt zu zentrieren */
 .PDF-wrapper {
   display: flex;
   flex-direction: column;
@@ -16,17 +12,15 @@
   height: 100%;
 }
 
-/* Stil für den PDF-Container */
 #pdfContainer {
-  border-radius: 15px;                    /* Abgerundete Ecken */
-  overflow-y: auto;                       /* Vertikales Scrollen, falls benötigt */
-  opacity: 0.95;                          /* Leichte Transparenz */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);/* Hintergrundschatten */
-  margin: 20px auto;                      /* Zentriert mit Rand */
-  /* Kein zusätzliches Padding oder Hintergrund */
+  border-radius: 15px;
+  overflow-y: auto;
+  opacity: 0.95;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+
 }
 
-/* Sicherstellen, dass jedes Canvas in den Container passt und abgerundete Ecken übernimmt */
 #pdfContainer canvas {
   display: block;
   width: 100%;
