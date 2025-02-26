@@ -28,3 +28,21 @@
   border-radius: inherit;
   margin: 0 auto;
 }
+
+.pdf-controls {
+  margin-top: 5px;
+}
+
+.pdf-controls button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.pdf-controls button:hover {
+  color: #ccc;
+}

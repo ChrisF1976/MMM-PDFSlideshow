@@ -23,7 +23,9 @@ module.exports = NodeHelper.create({
       });
     } else if (notification === "DOWNLOAD_PDF") {
       let pdfUrl = payload.pdfURL;
-      let downloadFolder = path.join(__dirname, "pdfURL");
+      // Use the provided pdfFolder (if given) or default to "pdfs/"
+      let folderName = payload.pdfFolder || "pdfs/";
+      let downloadFolder = path.join(__dirname, folderName);
       // Create the download folder if it doesn't exist.
       if (!fs.existsSync(downloadFolder)) {
         fs.mkdirSync(downloadFolder);
@@ -34,7 +36,7 @@ module.exports = NodeHelper.create({
       // If the file already exists, return it immediately.
       if (fs.existsSync(filePath)) {
         console.log("File already downloaded:", filePath);
-        this.sendSocketNotification("PDF_DOWNLOADED", { pdfFile: "pdfURL/" + fileName });
+        this.sendSocketNotification("PDF_DOWNLOADED", { pdfFile: fileName });
         return;
       }
 
@@ -50,8 +52,8 @@ module.exports = NodeHelper.create({
         file.on("finish", () => {
           file.close(() => {
             console.log("Downloaded file saved to", filePath);
-            // Notify the module with the relative path to the downloaded PDF.
-            this.sendSocketNotification("PDF_DOWNLOADED", { pdfFile: "pdfURL/" + fileName });
+            // Notify the module with the downloaded file's name.
+            this.sendSocketNotification("PDF_DOWNLOADED", { pdfFile: fileName });
           });
         });
       }).on("error", (err) => {
