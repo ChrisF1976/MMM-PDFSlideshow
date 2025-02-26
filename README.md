@@ -41,7 +41,7 @@ MMM-PDFSlideshow is a MagicMirror module that displays PDF documents as a slides
        displayTime: 10000,          // Time in milliseconds per PDF/page
        fullscreen: false,           // Enable or disable fullscreen mode. If true, set also `position` to a fulscreen region.
        width: "500px",              // Width when fullscreen is not disabled
-       pageflip: false,             // Automatically flip through pages
+       pageflip: true,             // Automatically flip through pages. Set to `true` for best navigation experience!
        transitionEffect: "fade",
        transitionEffectSpeed: 1000,
        pageflipTimeout: 10*1000,    // For manual navigation. After this interval the Slideshow restarts.
@@ -78,6 +78,8 @@ The module supports the following notifications:
 - **GET_PDF_URL**  
   **Action:** Downloads a remote PDF from the provided URL into the designated PDF folder. Once the download is successful, the module immediately jumps to that PDF in the slideshow.  
   **Usage:** Send this notification with a valid URL string as its payload. This is useful for dynamically adding and displaying a remote PDF on demand.
+
+**Set `pageflip: true,` for best navigation experience!**
 
 ---
 ## How It Works
