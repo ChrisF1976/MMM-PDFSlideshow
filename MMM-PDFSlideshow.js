@@ -4,8 +4,8 @@ Module.register("MMM-PDFSlideshow", {
     pdfPath: "",                 // Specific PDF file URL or absolute path; if provided, it will be downloaded and added to the folder list.
     displayTime: 10000,          // Time (ms) each page (or PDF) is shown
     fullscreen: false,           // If true, module fills the entire screen
-    width: "800px",              // Module width when fullscreen is false
-    pageflip: false,             // If true, auto-advance through each page; if false, show scalable PDF
+    width: "500px",              // Module width when fullscreen is false
+    pageflip: true,              // If true, auto-advance through each page; if false, show scalable PDF
     transitionEffect: "fade",
     transitionEffectSpeed: 1000,
     pageflipTimeout: 10 * 1000,  // Manual control timeout (10 seconds)
